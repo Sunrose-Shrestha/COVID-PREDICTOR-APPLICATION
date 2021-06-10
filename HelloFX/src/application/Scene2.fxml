@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -14,11 +16,34 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="logoutButton" layoutX="1172.0" layoutY="966.0" mnemonicParsing="false" onAction="#logout" prefHeight="38.0" prefWidth="157.0" text="Logout">
+            <Button fx:id="logoutButton" layoutX="622.0" layoutY="668.0" mnemonicParsing="false" onAction="#logout" prefHeight="38.0" prefWidth="157.0" text="Logout">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
+            <Label layoutX="82.0" layoutY="189.0" text="1. Select your age group:" />
+            <RadioButton fx:id="oldAge" layoutX="96.0" layoutY="221.0" mnemonicParsing="false" onAction="#getAge" text="65 above">
+               <toggleGroup>
+                  <ToggleGroup fx:id="age" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="semiOldAge" layoutX="96.0" layoutY="246.0" mnemonicParsing="false" onAction="#getAge" text="35 - 65" toggleGroup="$age" />
+            <RadioButton fx:id="adults" layoutX="96.0" layoutY="271.0" mnemonicParsing="false" onAction="#getAge" text="18 - 35" toggleGroup="$age" />
+            <RadioButton fx:id="teenage" layoutX="96.0" layoutY="295.0" mnemonicParsing="false" onAction="#getAge" text="Below 18" toggleGroup="$age" />
+            <Label layoutX="82.0" layoutY="348.0" text="2. Select your profession:" />
+            <RadioButton fx:id="healthWorker" layoutX="97.0" layoutY="383.0" mnemonicParsing="false" onAction="#getProfession" text="Health Worker">
+               <toggleGroup>
+                  <ToggleGroup fx:id="profession" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="policeMen" layoutX="97.0" layoutY="409.0" mnemonicParsing="false" onAction="#getProfession" text="Policemen" toggleGroup="$profession" />
+            <RadioButton fx:id="deliveryMen" layoutX="97.0" layoutY="437.0" mnemonicParsing="false" onAction="#getProfession" text="Delivery men" toggleGroup="$profession" />
+            <RadioButton fx:id="shopKeeper" layoutX="97.0" layoutY="462.0" mnemonicParsing="false" onAction="#getProfession" text="Shopkeeper" toggleGroup="$profession" />
+            <Label fx:id="yourResult" layoutX="578.0" layoutY="537.0" text="Your result here...">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
