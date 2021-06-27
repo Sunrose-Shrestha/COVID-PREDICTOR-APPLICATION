@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="742.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Scene2Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Scene2Controller">
    <children>
-      <AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1074.0" prefWidth="1786.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="scenePane" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1074.0" prefWidth="896.0">
          <children>
             <Label fx:id="nameLabel" layoutX="70.0" layoutY="61.0" text="Hello:">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="logoutButton" layoutX="622.0" layoutY="668.0" mnemonicParsing="false" onAction="#logout" prefHeight="38.0" prefWidth="157.0" text="Logout">
+            <Button fx:id="resultButton" layoutX="437.0" layoutY="631.0" mnemonicParsing="false" onAction="#result" prefHeight="38.0" prefWidth="157.0" text="Display Result">
                <font>
                   <Font size="16.0" />
                </font>
@@ -39,11 +39,32 @@
             <RadioButton fx:id="policeMen" layoutX="97.0" layoutY="409.0" mnemonicParsing="false" onAction="#getProfession" text="Policemen" toggleGroup="$profession" />
             <RadioButton fx:id="deliveryMen" layoutX="97.0" layoutY="437.0" mnemonicParsing="false" onAction="#getProfession" text="Delivery men" toggleGroup="$profession" />
             <RadioButton fx:id="shopKeeper" layoutX="97.0" layoutY="462.0" mnemonicParsing="false" onAction="#getProfession" text="Shopkeeper" toggleGroup="$profession" />
-            <Label fx:id="yourResult" layoutX="578.0" layoutY="537.0" text="Your result here...">
-               <font>
-                  <Font size="32.0" />
-               </font>
-            </Label>
+            <Label layoutX="80.0" layoutY="550.0" text="3. Select your health history:" />
+            <RadioButton fx:id="lungsDisease" layoutX="92.0" layoutY="578.0" mnemonicParsing="false" onAction="#getHealth" text="Lungs disease">
+               <toggleGroup>
+                  <ToggleGroup fx:id="health" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="asthma" layoutX="94.0" layoutY="606.0" mnemonicParsing="false" onAction="#getHealth" text="Asthma" toggleGroup="$health" />
+            <RadioButton fx:id="heartDisease" layoutX="93.0" layoutY="633.0" mnemonicParsing="false" onAction="#getHealth" text="Heart disease" toggleGroup="$health" />
+            <RadioButton fx:id="bloodDisorder" layoutX="93.0" layoutY="661.0" mnemonicParsing="false" onAction="#getHealth" text="Blood disorder" toggleGroup="$health" />
+            <RadioButton fx:id="organTransplant" layoutX="92.0" layoutY="689.0" mnemonicParsing="false" onAction="#getHealth" text="Organ transplant" toggleGroup="$health" />
+            <Label layoutX="430.0" layoutY="189.0" text="4. Select your vaccination status:" />
+            <RadioButton fx:id="done" layoutX="440.0" layoutY="221.0" mnemonicParsing="false" onAction="#getVaccination" text="Done">
+               <toggleGroup>
+                  <ToggleGroup fx:id="vaccination" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="notDone" layoutX="440.0" layoutY="246.0" mnemonicParsing="false" onAction="#getVaccination" text="Not Done" toggleGroup="$vaccination" />
+            <RadioButton fx:id="none" layoutX="96.0" layoutY="488.0" mnemonicParsing="false" onAction="#getProfession" text="None of the above" toggleGroup="$profession" />
+            <RadioButton fx:id="none1" layoutX="94.0" layoutY="717.0" mnemonicParsing="false" onAction="#getHealth" text="None of the above" toggleGroup="$health" />
+            <Label layoutX="432.0" layoutY="304.0" text="5. Select your gender:" />
+            <RadioButton fx:id="male" layoutX="433.0" layoutY="348.0" mnemonicParsing="false" onAction="#getGender" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="female" layoutX="433.0" layoutY="375.0" mnemonicParsing="false" onAction="#getGender" text="Female" toggleGroup="$gender" />
          </children>
       </AnchorPane>
    </children>
